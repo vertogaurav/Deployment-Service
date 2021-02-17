@@ -1,6 +1,7 @@
 package io.Hashedin.Tracker;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
@@ -13,6 +14,7 @@ public class TrackController {
     private ServiceService serviceService;
 
     @RequestMapping("/api/v1/service-details")
+    @ResponseStatus(HttpStatus.CREATED)
     public List<Service> getAllServices(){
         return serviceService.getAllServices();
     }

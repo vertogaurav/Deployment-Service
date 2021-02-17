@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ServiceRepository extends JpaRepository<Service,Integer> {
     List<Service> findByIdOrderByNameAsc(Integer id);
+   Service getById(Integer id);
 }
